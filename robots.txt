@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abdeldesignstudio.github.io/abdel_d_studio/sitemap.xml
