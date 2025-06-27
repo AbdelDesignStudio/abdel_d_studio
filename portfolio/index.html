@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdel Design Studio - Portfólio</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#003C3C',secondary:'#f4f0ea'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Pacifico&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Birthstone&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+scroll-behavior: smooth;
+}
+.font-raleway {
+font-family: 'Raleway', sans-serif;
+}
+.card-hover {
+transition: all 0.3s ease;
+}
+.card-hover:hover {
+transform: translateY(-8px);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.hero-bg {
+background-image: url('https://readdy.ai/api/search-image?query=minimalist%20design%20studio%20workspace%20with%20natural%20light%2C%20clean%20white%20desk%20with%20design%20elements%2C%20professional%20camera%20equipment%2C%20computer%20with%20design%20software%2C%20elegant%20and%20sophisticated%20atmosphere%2C%20soft%20beige%20and%20white%20tones%2C%20architectural%20details%2C%20high-end%20interior%20design&width=1600&height=800&seq=hero1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.category-btn.active {
+background-color: #003C3C;
+color: white;
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #003C3C;
+}
+.custom-checkbox {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #003C3C;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+position: relative;
+}
+.custom-checkbox:checked {
+background-color: #003C3C;
+}
+.custom-checkbox:checked::after {
+content: '';
+position: absolute;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+top: 2px;
+left: 6px;
+transform: rotate(45deg);
+}
+@media (max-width: 768px) {
+.mobile-menu {
+display: none;
+}
+.mobile-menu.active {
+display: flex;
+}
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Navbar -->
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+<nav class="bg-white/70 backdrop-blur-md py-4 px-6 md:px-10 flex justify-between items-center shadow-sm rounded-xl mx-4 mt-4">
+<div class="flex items-center">
+<a href="#" class="text-2xl font-['Aguafina_Script'] text-primary">Abdel Design Studio</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#portfolio" class="text-gray-800 hover:text-primary transition-colors font-medium">Portfólio</a>
+<a href="#services" class="text-gray-800 hover:text-primary transition-colors font-medium">Serviços</a>
+<a href="#about" class="text-gray-800 hover:text-primary transition-colors font-medium">Sobre</a>
+<a href="https://abdeldesignstudio.github.io/abdel_d_studio/" class="bg-primary text-white px-6 py-2 rounded-button transition-all hover:bg-opacity-90">Ir ao Site Principal</a>
+</div>
+<div class="md:hidden flex items-center">
+<button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center text-gray-800">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="hero-bg relative pt-32 pb-20 md:pt-40 md:pb-32">
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="container mx-auto px-6 md:px-10 relative z-10">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-raleway mb-6 leading-tight">Transformando ideias em experiências visuais impactantes</h1>
+<p class="text-lg md:text-xl text-white/90 mb-8">Somos um estúdio criativo especializado em design gráfico, websites, edição de vídeos e filmagem profissional.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#portfolio" class="bg-white text-primary px-8 py-3 rounded-button font-medium transition-all hover:bg-opacity-90 whitespace-nowrap">Ver Portfólio</a>
+<a href="https://abdeldesignstudio.github.io/abdel_d_studio/" class="bg-primary text-white px-8 py-3 rounded-button font-medium transition-all hover:bg-opacity-90 whitespace-nowrap">Ir ao Site Principal</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-20 bg-white">
+<div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 font-raleway text-gray-900">Nosso Portfólio</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Explore nossa coleção de trabalhos em design gráfico, edição de vídeo, desenvolvimento web e filmagem.</p>
+</div>
+<!-- Filter Categories -->
+<div class="flex flex-wrap justify-center gap-3 mb-12">
+<button class="category-btn active bg-secondary text-gray-800 px-6 py-2 rounded-full font-medium transition-all hover:bg-opacity-80 whitespace-nowrap !rounded-button" data-category="all">Todos</button>
+<button class="category-btn bg-gray-100 text-gray-800 px-6 py-2 rounded-full font-medium transition-all hover:bg-opacity-80 whitespace-nowrap !rounded-button" data-category="design">Design Gráfico</button>
+<button class="category-btn bg-gray-100 text-gray-800 px-6 py-2 rounded-full font-medium transition-all hover:bg-opacity-80 whitespace-nowrap !rounded-button" data-category="video">Edição de Vídeo</button>
+<button class="category-btn bg-gray-100 text-gray-800 px-6 py-2 rounded-full font-medium transition-all hover:bg-opacity-80 whitespace-nowrap !rounded-button" data-category="web">Sites</button>
+<button class="category-btn bg-gray-100 text-gray-800 px-6 py-2 rounded-full font-medium transition-all hover:bg-opacity-80 whitespace-nowrap !rounded-button" data-category="film">Filmagem</button>
+</div>
+<!-- Portfolio Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+<!-- Project Card 1 -->
+<div class="card-hover bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card" data-category="design">
+<div class="h-64 overflow-hidden">
+<img src="img/Anwisha.jpg" alt="Projeto de Design Gráfico" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary bg-secondary bg-opacity-30 px-3 py-1 rounded-full">Design Gráfico</span>
+<h3 class="text-xl font-bold mt-3 mb-2">Logotipo</h3>
+<p class="text-gray-600 mb-4">Salão de Beleza Anwisha Beauty Pomour
+</p>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="card-hover bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card" data-category="web">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%20responsive%20website%20design%20for%20a%20boutique%20hotel%2C%20elegant%20web%20design%20with%20clean%20interface%2C%20professional%20website%20portfolio%20example%2C%20sophisticated%20layout%20with%20beautiful%20typography%2C%20displayed%20on%20desktop%20and%20mobile%20devices&width=600&height=400&seq=proj2&orientation=landscape" alt="Projeto de Website" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary bg-secondary bg-opacity-30 px-3 py-1 rounded-full">Sites</span>
+<h3 class="text-xl font-bold mt-3 mb-2">Hotel Boutique Evereste</h3>
+<p class="text-gray-600 mb-4">Website responsivo com sistema de reservas integrado.</p>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="card-hover bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card" data-category="video">
+<div class="h-64 overflow-hidden">
+<img src="img/ariane.jpg" alt="Projeto de Edição de Vídeo" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary bg-secondary bg-opacity-30 px-3 py-1 rounded-full">Edição de Vídeo</span>
+<h3 class="text-xl font-bold mt-3 mb-2">Campanha loja Ariane Cosméticos</h3>
+<p class="text-gray-600 mb-4">Série de vídeos promocionais para vídeos promocionais.</p>
+</div>
+</div>
+<!-- Project Card 4 -->
+<div class="card-hover bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card" data-category="film">
+<div class="h-64 overflow-hidden">
+<img src="img/luanda.jpg" alt="Projeto de Filmagem" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary bg-secondary bg-opacity-30 px-3 py-1 rounded-full">Filmagem</span>
+<h3 class="text-xl font-bold mt-3 mb-2">Documentário Luanda</h3>
+<p class="text-gray-600 mb-4">Documentário sobre a transformação urbana de Luanda.</p>
+</div>
+</div>
+<!-- Project Card 5 -->
+<div class="card-hover bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card" data-category="design">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%20packaging%20design%20for%20gourmet%20food%20product%2C%20sophisticated%20product%20design%20with%20minimal%20aesthetic%2C%20professional%20graphic%20design%20portfolio%20sample%2C%20high-end%20packaging%20on%20clean%20background%2C%20brand%20identity%20elements&width=600&height=400&seq=proj5&orientation=landscape" alt="Projeto de Design de Embalagem" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary bg-secondary bg-opacity-30 px-3 py-1 rounded-full">Design Gráfico</span>
+<h3 class="text-xl font-bold mt-3 mb-2">Cafeteria Geatineit</h3>
+<p class="text-gray-600 mb-4">Design de embalagem para linha de cafés especiais.</p>
+</div>
+</div>
+<!-- Project Card 6 -->
+<div class="card-hover bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card" data-category="web">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%20e-commerce%20website%20design%20for%20fashion%20brand%2C%20sophisticated%20online%20store%20interface%2C%20professional%20web%20design%20portfolio%20sample%2C%20clean%20and%20minimal%20web%20layout%20on%20devices%2C%20high-end%20digital%20shopping%20experience&width=600&height=400&seq=proj6&orientation=landscape" alt="Projeto de E-commerce" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary bg-secondary bg-opacity-30 px-3 py-1 rounded-full">Sites</span>
+<h3 class="text-xl font-bold mt-3 mb-2">Moda Africana E-commerce</h3>
+<p class="text-gray-600 mb-4">Loja online completa com sistema de pagamento integrado.</p>
+</div>
+</div>
+<!-- Project Card 7 -->
+<div class="card-hover bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card" data-category="film">
+<div class="h-64 overflow-hidden">
+<img src="img/festa.jpg" alt="Projeto de Filmagem de Casamento" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary bg-secondary bg-opacity-30 px-3 py-1 rounded-full">Filmagem</span>
+<h3 class="text-xl font-bold mt-3 mb-2">Concerto Unitel</h3>
+<p class="text-gray-600 mb-4">Filmagem de concerto na marginal de Luanda.</p>
+</div>
+</div>
+<!-- Project Card 8 -->
+<div class="card-hover bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card" data-category="design">
+<div class="h-64 overflow-hidden">
+<img src="img/chef.jpg" alt="Projeto de Design Imobiliário" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary bg-secondary bg-opacity-30 px-3 py-1 rounded-full">Design Gráfico</span>
+<h3 class="text-xl font-bold mt-3 mb-2">Logotipo do restaurante Cheffest </h3>
+<p class="text-gray-600 mb-4">Design de logotipo que atende a imagem do restaurante.</p>
+</div>
+</div>
+<!-- Project Card 9 -->
+<div class="card-hover bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card" data-category="video">
+<div class="h-64 overflow-hidden">
+<img src="img/video.jpg" alt="Projeto de Videoclipe" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary bg-secondary bg-opacity-30 px-3 py-1 rounded-full">Edição de Vídeo</span>
+<h3 class="text-xl font-bold mt-3 mb-2">Videoclipe Musical</h3>
+<p class="text-gray-600 mb-4">Produção completa de videoclipe para artista local.</p>
+</div>
+</div>
+<!-- Project Card 10 -->
+<div class="card-hover bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card" data-category="web">
+<div class="h-64 overflow-hidden">
+<img src="img/boa.jpg" alt="Projeto de App Fitness" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary bg-secondary bg-opacity-30 px-3 py-1 rounded-full">Sites</span>
+<h3 class="text-xl font-bold mt-3 mb-2">Cardápio Digital Restaurante Boa Vida</h3>
+<p class="text-gray-600 mb-4">Fizemos um Cardápio digital para o restaurante Boa vida, menu responsivo e com sistema de delivery...</p>
+</div>
+</div>
+<!-- Project Card 11 -->
+<div class="card-hover bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card" data-category="design">
+<div class="h-64 overflow-hidden">
+<img src="img/menu.jpg" alt="Projeto de Menu Restaurante" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary bg-secondary bg-opacity-30 px-3 py-1 rounded-full">Design Gráfico</span>
+<h3 class="text-xl font-bold mt-3 mb-2">Flyer para o restaurante Verdinha</h3>
+<p class="text-gray-600 mb-4">Design flyer de cardápio.</p>
+</div>
+</div>
+<!-- Project Card 12 -->
+<div class="card-hover bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card" data-category="film">
+<div class="h-64 overflow-hidden">
+<img src="img/angotic.jpg" alt="Projeto de Evento Corporativo" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary bg-secondary bg-opacity-30 px-3 py-1 rounded-full">Filmagem</span>
+<h3 class="text-xl font-bold mt-3 mb-2">Angotic 2025</h3>
+<p class="text-gray-600 mb-4">Filmamos o evento todo, foi um dia memorável.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20 bg-secondary bg-opacity-30">
+<div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 font-raleway text-gray-900">Nossos Serviços</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Oferecemos soluções criativas completas para elevar sua marca e comunicação visual.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Service 1 -->
+<div class="bg-white p-8 rounded-lg shadow-sm flex flex-col items-center text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-palette-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Design Gráfico</h3>
+<p class="text-gray-600">Identidade visual, materiais impressos, embalagens e design editorial.</p>
+</div>
+<!-- Service 2 -->
+<div class="bg-white p-8 rounded-lg shadow-sm flex flex-col items-center text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-movie-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Edição de Vídeo</h3>
+<p class="text-gray-600">Edição profissional, correção de cor, motion graphics e pós-produção.</p>
+</div>
+<!-- Service 3 -->
+<div class="bg-white p-8 rounded-lg shadow-sm flex flex-col items-center text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-code-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Desenvolvimento Web</h3>
+<p class="text-gray-600">Sites responsivos, e-commerce, landing pages e sistemas personalizados.</p>
+</div>
+<!-- Service 4 -->
+<div class="bg-white p-8 rounded-lg shadow-sm flex flex-col items-center text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-camera-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Filmagem</h3>
+<p class="text-gray-600">Produção audiovisual, comerciais, documentários e conteúdo corporativo.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+<div class="container mx-auto px-6 md:px-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<img src="img/estudio.jpg" alt="Sobre o Abdel Design Studio" class="rounded-lg shadow-md w-full h-auto">
+</div>
+<div>
+<h2 class="text-3xl md:text-4xl font-bold mb-6 font-raleway text-gray-900">Sobre</h2>
+<p class="text-lg text-gray-600 mb-6">Somos um estúdio criativo comprometido em oferecer soluções visuais sofisticadas e impactantes para nossos clientes</p>
+<div class="flex flex-wrap gap-6">
+<div class="flex items-center">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-award-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">+120</h4>
+<p class="text-gray-600">Projetos Concluídos</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-user-smile-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900">+80</h4>
+<p class="text-gray-600">Clientes Satisfeitos</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+<div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 font-raleway text-gray-900">Entre em Contato</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Vamos conversar sobre seu próximo projeto e como podemos ajudar a transformar suas ideias em realidade.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div>
+<form class="space-y-6">
+<div>
+<label for="name" class="block text-gray-700 mb-2 font-medium">Nome</label>
+<input type="text" id="name" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-30 focus:border-primary" placeholder="Seu nome completo">
+</div>
+<div>
+<label for="email" class="block text-gray-700 mb-2 font-medium">Email</label>
+<input type="email" id="email" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-30 focus:border-primary" placeholder="seu.email@exemplo.com">
+</div>
+<div>
+<label for="service" class="block text-gray-700 mb-2 font-medium">Serviço de Interesse</label>
+<div class="relative">
+<select id="service" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded appearance-none focus:ring-2 focus:ring-primary focus:ring-opacity-30 focus:border-primary pr-8">
+<option value="">Selecione um serviço</option>
+<option value="design">Design Gráfico</option>
+<option value="video">Edição de Vídeo</option>
+<option value="web">Desenvolvimento Web</option>
+<option value="film">Filmagem</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-400"></i>
+</div>
+</div>
+</div>
+<div>
+<label for="message" class="block text-gray-700 mb-2 font-medium">Mensagem</label>
+<textarea id="message" rows="5" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-30 focus:border-primary" placeholder="Descreva seu projeto ou necessidade..."></textarea>
+</div>
+<div class="flex items-start">
+<input type="checkbox" id="privacy" class="custom-checkbox mt-1">
+<label for="privacy" class="ml-3 text-gray-600 text-sm">Concordo com a <a href="#" class="text-primary hover:underline">Política de Privacidade</a> e autorizo o contato por email.</label>
+</div>
+<button type="submit" class="bg-primary text-white px-8 py-3 rounded-button font-medium transition-all hover:bg-opacity-90 whitespace-nowrap">Enviar Mensagem</button>
+</a>
+</form>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 mb-1">Endereço</h4>
+<p class="text-gray-600">Luanda, Angola<br></p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 mb-1">Telefone</h4>
+<p class="text-gray-600">(244) 944 230 503</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 mb-1">Email</h4>
+<p class="text-gray-600">abdeldesigns.studio@gmail.com</p>
+</div>
+</div>
+<div class="mt-8">
+  <h4 class="font-bold text-gray-900 mb-4">Siga-nos</h4>
+  <div class="flex space-x-4">
+    <a href="https://www.instagram.com/abdeldesignstudio?igsh=aDl4bmFrN21kbnY0" class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary hover:bg-primary hover:text-white transition-colors">
+      <i class="ri-instagram-line"></i>
+
+</a>
+<a href="https://www.tiktok.com/@abdel_designs_studio?lang=pt-BR" class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-tiktok-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=61575865363473&locale=pt_BR" class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="https://wa.me/244944230503" class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-whatsapp-line"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-6 md:px-10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+<div>
+<a href="#" class="text-2xl font-['Aguafina_Script'] text-white mb-4 inline-block">Abdel Design Studio</a>
+<p class="text-gray-400 mb-6">Somos um estúdio criativo comprometido em oferecer soluções visuais sofisticadas e impactantes para nossos clientes.</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/abdeldesignstudio?igsh=aDl4bmFrN21kbnY0" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-instagram-line ri-lg"></i>
+</a>
+<a href="https://www.tiktok.com/@abdel_designs_studio?lang=pt-BR" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-tiktok-line ri-lg"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=61575865363473&locale=pt_BR" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+<a href="https://wa.me/244944230503" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-whatsapp-line ri-lg"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Serviços</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Design Gráfico</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Edição de Vídeo</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Desenvolvimento Web</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Filmagem</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+<ul class="space-y-2">
+<li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfólio</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors">Sobre Nós</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contato</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Política de Privacidade</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Contato</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<i class="ri-map-pin-line mr-2 mt-1 text-gray-400"></i>
+<span class="text-gray-400">Luanda, Angola</span>
+</li>
+<li class="flex items-center">
+<i class="ri-phone-line mr-2 text-gray-400"></i>
+<span class="text-gray-400">(244) 944 230 503</span>
+</li>
+<li class="flex items-center">
+<i class="ri-mail-line mr-2 text-gray-400"></i>
+<span class="text-gray-400">abdeldesigns.studio@gmail.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Abdel Design Studio. Todos os direitos reservados.</p>
+</div>
+</div>
+</footer>
+<script id="navigationScript">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('active');
+if (mobileMenu.classList.contains('active')) {
+mobileMenuButton.innerHTML = '<i class="ri-close-line ri-lg"></i>';
+} else {
+mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+}
+});
+// Handle scroll for navbar
+const header = document.querySelector('header');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 50) {
+header.classList.add('shadow-md');
+} else {
+header.classList.remove('shadow-md');
+}
+});
+// Close mobile menu when clicking on a link
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.remove('active');
+mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+});
+});
+});
+</script>
+<script id="portfolioFilterScript">
+document.addEventListener('DOMContentLoaded', function() {
+const categoryButtons = document.querySelectorAll('.category-btn');
+const projectCards = document.querySelectorAll('.project-card');
+categoryButtons.forEach(button => {
+button.addEventListener('click', function() {
+// Remove active class from all buttons
+categoryButtons.forEach(btn => {
+btn.classList.remove('active');
+btn.classList.add('bg-gray-100');
+btn.classList.remove('bg-secondary');
+});
+// Add active class to clicked button
+this.classList.add('active');
+this.classList.remove('bg-gray-100');
+this.classList.add('bg-secondary');
+const category = this.getAttribute('data-category');
+// Filter projects
+projectCards.forEach(card => {
+if (category === 'all' || card.getAttribute('data-category') === category) {
+card.style.display = 'block';
+} else {
+card.style.display = 'none';
+}
+});
+});
+});
+});
+</script>
+<script id="formValidationScript">
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.querySelector('form');
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+// Simple validation
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const message = document.getElementById('message').value;
+const privacy = document.getElementById('privacy').checked;
+let isValid = true;
+if (!name) {
+isValid = false;
+document.getElementById('name').classList.add('border-red-500');
+} else {
+document.getElementById('name').classList.remove('border-red-500');
+}
+if (!email || !email.includes('@')) {
+isValid = false;
+document.getElementById('email').classList.add('border-red-500');
+} else {
+document.getElementById('email').classList.remove('border-red-500');
+}
+if (!message) {
+isValid = false;
+document.getElementById('message').classList.add('border-red-500');
+} else {
+document.getElementById('message').classList.remove('border-red-500');
+}
+if (!privacy) {
+isValid = false;
+document.getElementById('privacy').classList.add('border-red-500');
+} else {
+document.getElementById('privacy').classList.remove('border-red-500');
+}
+if (isValid) {
+// Form is valid, would submit to server here
+alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+contactForm.reset();
+}
+});
+}
+});
+</script>
+<script id="smoothScrollScript">
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80, // Offset for fixed header
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>
